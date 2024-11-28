@@ -38,7 +38,7 @@ public class EngineSolution : Solution
             // conf.AddProject<FBX>(target);
 
             // // dll
-            //conf.AddProject<Core>(target);
+            conf.AddProject<Core>(target);
             // conf.AddProject<Engine>(target);
             //conf.AddProject<Launch>(target);
             // conf.AddProject<Network>(target);

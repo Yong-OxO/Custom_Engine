@@ -25,7 +25,7 @@ public class SE1 : CommonProject
         conf.SolutionFolder = "Engine";
         conf.Output = Configuration.OutputType.Exe;
 
-       // conf.AddPublicDependency<Core>(target);
+       conf.AddPublicDependency<Core>(target);
        // conf.AddPublicDependency<Launch>(target);
 
         // if (target.LaunchType == ELaunchType.Editor || target.LaunchType == ELaunchType.Client)
