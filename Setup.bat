@@ -1,10 +1,8 @@
 @echo off
 
-
 :-----------------------------------------------------------------------------------------------------------------------------
 REM  관리자 권한을 확인합니다.
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
 
 REM 오류 플래그가 설정되어 있으면 관리자 권한이 없습니다.
 if '%errorlevel%' NEQ '0' (goto UACPrompt) else ( goto gotAdmin )
@@ -23,10 +21,8 @@ if '%errorlevel%' NEQ '0' (goto UACPrompt) else ( goto gotAdmin )
     CD /D "%~dp0"
 :-----------------------------------------------------------------------------------------------------------------------------
 
-
 echo [Build Sharpmake]
 dotnet build --configuration Release .\Engine\Source\Programs\Sharpmake\Sharpmake.Application\Sharpmake.Application.csproj
-
 
 echo [vcpkg task]
 cd Engine\Source\Programs\
